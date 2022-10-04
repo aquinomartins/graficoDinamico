@@ -1,0 +1,140 @@
+<?php
+
+echo "<meta charset='utf-8'>";
+$sql = "SELECT * FROM ras WHERE id IN ($FormOnde);";
+$result = $con->query($sql);
+
+
+
+
+//$sql = "SELECT id, firstname, lastname FROM MyGuests";
+//$result = $conn->query($sql);
+
+/*if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Acre: " . $row["acre"]. " " . $row["alagoas"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}*/
+
+
+/*while ($row = mysql_fetch_assoc($result)) {
+          echo $row["column1"];
+          echo $row["column2"];
+      }*/
+      
+while ($tbl = $result->fetch_assoc())
+            {$Codigo = $tbl["id"];
+                
+                $RA = $tbl["RA"];
+                
+                $natAcre = $tbl["acre"];
+                $natAlagoas = $tbl["alagoas"];
+                $natAmapa = $tbl["amapa"];
+                $natAmazonas = $tbl["amazonas"];
+                $natBahia = $tbl["bahia"];
+                $natCeara = $tbl["ceara"];
+                $natEspiritoSanto = $tbl["espiritoSanto"];
+                $natGoias = $tbl["goias"];
+                $natMaranhao = $tbl["maranhao"];
+                $natMatoGrosso = $tbl["matoGrosso"];
+                $natMatoGrossoDoSul = $tbl["matoGrossoDoSul"];
+                $natMinasGerais = $tbl["minasGerais"];
+                $natPara = $tbl["para"];
+                $natParaiba = $tbl["paraiba"];
+                $natParana = $tbl["parana"];
+                $natPernambuco = $tbl["pernambuco"];
+                $natPiaui = $tbl["piaui"];
+                $natRioDeJaneiro = $tbl["rioDeJaneiro"];
+                $natRioGrandeDoNorte = $tbl["rioGrandeDoNorte"];
+                $natRioGrandeDoSul = $tbl["rioGrandeDoSul"];
+                $natRondonia = $tbl["rondonia"];
+                $natRoraima = $tbl["roraima"];
+                $natSantaCatarina = $tbl["santaCatarina"];
+                $natSaoPaulo = $tbl["saoPaulo"];
+                $natSergipe = $tbl["sergipe"];
+                $natTocantins = $tbl["tocantins"];
+                $natExterior = $tbl["exterior"];
+                $natNaoSabe = $tbl["naoSabe"];
+                $popCriancas = $tbl["criancas"];
+                $popJovens = $tbl["jovens"];
+                $popAdultos = $tbl["adultos"];
+                $popIdosos = $tbl["idosos"];
+                $transOnibus = $tbl["onibus"];
+                $transAutomovel = $tbl["automovel"];
+                $transUtilitario = $tbl["utilitario"];
+                $transMetro = $tbl["metro"];
+                $transMotocicleta = $tbl["motocicleta"];
+                $transBicicleta = $tbl["bicicleta"];
+                $transAPe = $tbl["aPe"];
+                $transOutros = $tbl["outros"];
+                $descricao = $tbl["descricao"];
+                $artesPlasticas = $tbl["artesPlasticas"];
+                $teatro = $tbl["teatro"];
+                $danca = $tbl["danca"];
+                $musica = $tbl["musica"];
+                $cinema = $tbl["cinema"];
+                $literatura = $tbl["literatura"];
+                $performance = $tbl["performance"];
+            }
+                
+                
+/*$sql2 = "SELECT * FROM ras WHERE id IN ($FormOnde);";
+$result2 = $con->query($sql2);
+            while ($tbl2 = $result->fetch_assoc())
+            {$Codigo2 = $tbl2[12];
+                
+                $natAcre2 = $tbl2["acre"];
+                $natAlagoas2 = $tbl2["alagoas"];
+                $natAmapa2 = $tbl2["amapa"];
+                $natAmazonas2 = $tbl2["amazonas"];
+                $natBahia2 = $tbl2["bahia"];
+                $natCeara2 = $tbl2["ceara"];
+                $natEspiritoSanto2 = $tbl2["espiritoSanto"];
+                $natGoias2 = $tbl2["goias"];
+                $natMaranhao2 = $tbl2["maranhao"];
+                $natMatoGrosso2 = $tbl2["matoGrosso"];
+                $natMatoGrossoDoSul2 = $tbl2["matoGrossoDoSul"];
+                $natMinasGerais2 = $tbl2["minasGerais"];
+                $natPara2 = $tbl2["para"];
+                $natParaiba2 = $tbl2["paraiba"];
+                $natParana2 = $tbl2["parana"];
+                $natPernambuco2 = $tbl2["pernambuco"];
+                $natPiaui2 = $tbl2["piaui"];
+                $natRioDeJaneiro2 = $tbl2["rioDeJaneiro"];
+                $natRioGrandeDoNorte2 = $tbl2["rioGrandeDoNorte"];
+                $natRioGrandeDoSul2 = $tbl2["rioGrandeDoSul"];
+                $natRondonia2 = $tbl2["rondonia"];
+                $natRoraima2 = $tbl2["roraima"];
+                $natSantaCatarina2 = $tbl2["santaCatarina"];
+                $natSaoPaulo2 = $tbl2["saoPaulo"];
+                $natSergipe2 = $tbl2["sergipe"];
+                $natTocantins2 = $tbl2["tocantins"];
+                $natExterior2 = $tbl2["exterior"];
+                $natNaoSabe2 = $tbl2["naoSabe"];
+                $popCriancas2 = $tbl2["criancas"];
+                $popJovens2 = $tbl2["jovens"];
+                $popAdultos2 = $tbl2["adultos"];
+                $popIdosos2 = $tbl2["idosos"];
+                $transOnibus2 = $tbl2["onibus"];
+                $transAutomovel2 = $tbl2["automovel"];
+                $transUtilitario2 = $tbl2["utilitario"];
+                $transMetro2 = $tbl2["metro"];
+                $transMotocicleta2 = $tbl2["motocicleta"];
+                $transBicicleta2 = $tbl2["bicicleta"];
+                $transAPe2 = $tbl2["aPe"];
+                $transOutros2 = $tbl2["outros"];
+                
+                /*$onibus = $tbl["onibus"];
+                $automovel = $tbl["automovel"];
+                $utilitario = $tbl["utilitario"];
+                $metro = $tbl["metro"];
+                $motocicleta = $tbl["motocicleta"];
+                $bicicleta = $tbl["bicicleta"];
+                $aPe = $tbl["aPe"];
+                $outros = $tbl["outros"];
+            }*/
+
+            ?>
